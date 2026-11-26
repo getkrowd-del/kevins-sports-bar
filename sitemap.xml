@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://getkrowd-del.github.io/kevins-sports-bar/community-table/</loc>
+    <lastmod>2026-11-26T19:44:07.087Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://getkrowd-del.github.io/kevins-sports-bar/promos/</loc>
-    <lastmod>2026-11-26T19:43:31.461Z</lastmod>
+    <lastmod>2026-11-26T19:44:01.190Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://getkrowd-del.github.io/kevins-sports-bar/parties/</loc>
+    <lastmod>2026-11-26T19:43:57.740Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://getkrowd-del.github.io/kevins-sports-bar/catering/</loc>
+    <lastmod>2026-11-26T19:43:54.750Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -26,23 +41,8 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://getkrowd-del.github.io/kevins-sports-bar/parties/</loc>
-    <lastmod>2026-11-26T19:42:58.337Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://getkrowd-del.github.io/kevins-sports-bar/catering/</loc>
-    <lastmod>2026-11-26T19:42:51.789Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://getkrowd-del.github.io/kevins-sports-bar/about/</loc>
     <lastmod>2026-11-26T19:42:45.129Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://getkrowd-del.github.io/kevins-sports-bar/community-table/</loc>
-    <lastmod>2026-11-26T19:42:38.522Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
