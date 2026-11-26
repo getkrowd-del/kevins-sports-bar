@@ -701,5 +701,60 @@
   document.getElementById('yr').textContent=new Date().getFullYear();
 })();
 </script>
+<!-- ===== Sips & Snacks w/ Santa – event popup (auto-hides after Dec 10, 2026 9 PM ET) ===== -->
+<div data-section="santa-popup">
+
+<div id="santaModal" role="dialog" aria-modal="true" aria-labelledby="snTitle" aria-hidden="true">
+  <div class="sn-box">
+    <button class="sn-x" type="button" aria-label="Close" data-sn-close>✕</button>
+    <div class="sn-img"><img src="https://krowdimg.b-cdn.net/kevinssportsbar/Gemini_Generated_Image_7i11gr7i11gr7i11.jpeg" alt="Sips &amp; Snacks with Santa at Kevin's Sports Bar, Thursday December 10, 2026, 6 to 9 PM, $25 ticket"></div>
+    <div class="sn-bd">
+      <span class="sn-tag">Special Event</span>
+      <h2 id="snTitle">Sips &amp; Snacks <span>w/ Santa</span></h2>
+      <div class="sn-when">Thursday, Dec 10 · 6 – 9 PM</div>
+      <div class="sn-cd" id="snCd"></div>
+      <ul class="sn-list">
+        <li>Sounds by EFAK</li>
+        <li>Complimentary 'Sip'</li>
+        <li>Game Day Bites</li>
+        <li>Spirit Tasting</li>
+        <li>A Visit From Santa</li>
+      </ul>
+      <div class="sn-price"><b>$25</b><span>Ticket</span></div>
+      <p class="sn-give">A portion of ticket proceeds benefits San Diego Food Bank.</p>
+      <a class="sn-buy" href="https://tickets.eatdrinklocals.com/index.cfm/1035/3" target="_blank" rel="noopener">Buy Tickets</a>
+      <button class="sn-later" type="button" data-sn-close>Maybe later</button>
+    </div>
+  </div>
+</div>
+<button id="santaBadge" type="button" aria-label="Sips and Snacks with Santa – get tickets">
+  <img src="https://krowdimg.b-cdn.net/kevinssportsbar/7078359f-1bd9-4656-b1b5-1bf258f5339f.png" alt="">
+  <span>🎟 Get Tickets</span>
+</button>
+<script>
+(function(){
+  var END=Date.UTC(2026,11,11,2,0,0); /* Dec 10, 2026 9:00 PM Eastern */
+  var EVENT=Date.UTC(2026,11,10,23,0,0); /* Dec 10, 2026 6:00 PM Eastern */
+  var now=Date.now(),m=document.getElementById('santaModal'),b=document.getElementById('santaBadge'),last=null;
+  if(!m||!b)return;
+  if(now>=END){m.parentNode.removeChild(m);b.parentNode.removeChild(b);return;}
+  function today(){try{return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York'}).format(new Date());}catch(e){return new Date().toDateString();}}
+  function seen(){try{return localStorage.getItem('kevins_santa_popup')===today();}catch(e){return false;}}
+  function mark(){try{localStorage.setItem('kevins_santa_popup',today());}catch(e){}}
+  var cd=document.getElementById('snCd'),d=Math.ceil((EVENT-now)/864e5);
+  cd.textContent=now>=EVENT?'Happening now!':d<=1?'Tomorrow night!':d+' days to go';
+  if(now>=EVENT-36e5*18&&now<EVENT)cd.textContent='Tonight!';
+  function open(){last=document.activeElement;m.classList.add('open');m.setAttribute('aria-hidden','false');b.classList.remove('show');document.body.style.overflow='hidden';mark();var x=m.querySelector('.sn-buy');if(x)x.focus();}
+  function close(){m.classList.remove('open');m.setAttribute('aria-hidden','true');b.classList.add('show');document.body.style.overflow='';if(last&&last.focus)last.focus();}
+  Array.prototype.forEach.call(m.querySelectorAll('[data-sn-close]'),function(el){el.addEventListener('click',close);});
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close();});
+  b.addEventListener('click',open);
+  var force=/[?&]santa=1/.test(location.search);
+  if(force||!seen())setTimeout(open,force?300:2000);else b.classList.add('show');
+})();
+</script>
+</div>
+<!-- ===== /Santa popup ===== -->
 </body>
 </html>
