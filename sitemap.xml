@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://getkrowd-del.github.io/kevins-sports-bar/community-table/</loc>
+    <lastmod>2026-11-26T18:46:48.626Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://getkrowd-del.github.io/kevins-sports-bar/</loc>
     <lastmod>2026-11-26T18:46:42.326Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -43,11 +48,6 @@
   <url>
     <loc>https://getkrowd-del.github.io/kevins-sports-bar/about/</loc>
     <lastmod>2026-11-26T18:45:58.363Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://getkrowd-del.github.io/kevins-sports-bar/community-table/</loc>
-    <lastmod>2026-11-26T18:45:54.742Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
