@@ -237,3 +237,43 @@ nav{position:sticky;top:0;z-index:1000;background:var(--navy-dk);border-bottom:3
   .carousel-arrow{top:125px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+#santaModal{position:fixed;inset:0;z-index:10050;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(6,14,34,.82);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+#santaModal.open{display:flex;animation:snFade .3s ease}
+@keyframes snFade{from{opacity:0}to{opacity:1}}
+@keyframes snPop{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+.sn-box{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);width:min(980px,100%);max-height:calc(100vh - 40px);background:#3a1015;border:3px solid #d9a441;box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden;animation:snPop .4s cubic-bezier(.2,.8,.2,1)}
+.sn-img{background:#3a1015;display:flex;align-items:center;justify-content:center;min-height:0}
+.sn-img img{width:100%;height:100%;max-height:calc(100vh - 46px);object-fit:contain;display:block}
+.sn-bd{padding:40px 36px 32px;color:#f6ead4;overflow-y:auto;display:flex;flex-direction:column;background:linear-gradient(180deg,#4a141b,#2c0b10)}
+.sn-tag{align-self:flex-start;background:#d9a441;color:#2c0b10;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.2em;text-transform:uppercase;padding:6px 12px;margin-bottom:14px}
+.sn-bd h2{font:700 clamp(34px,4vw,48px)/.95 'Oswald',sans-serif;text-transform:uppercase;color:#fff;margin:0 0 6px}
+.sn-bd h2 span{color:#d9a441}
+.sn-when{font:700 19px 'Barlow Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#f6ead4;margin:10px 0 4px}
+.sn-cd{font:700 14px 'Barlow Condensed',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d9a441;margin-bottom:16px}
+.sn-list{list-style:none;margin:0 0 18px;padding:14px 0;border-top:1px solid rgba(217,164,65,.4);border-bottom:1px solid rgba(217,164,65,.4)}
+.sn-list li{font:700 16px 'Barlow Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:5px 0 5px 24px;position:relative}
+.sn-list li:before{content:"✦";position:absolute;left:0;color:#d9a441}
+.sn-price{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+.sn-price b{font:700 46px/1 'Oswald',sans-serif;color:#fff}
+.sn-price span{font:700 16px 'Barlow Condensed',sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.sn-give{font-size:13px;font-style:italic;color:rgba(246,234,212,.75);margin:0 0 20px;line-height:1.5}
+.sn-buy{display:block;text-align:center;background:#E0242F;color:#fff!important;border:2px solid #E0242F;font:800 18px 'Barlow Condensed',sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:16px 20px;transition:.2s;box-shadow:0 8px 20px rgba(224,36,47,.35)}
+.sn-buy:hover{background:#fff;color:#E0242F!important;border-color:#fff}
+.sn-later{margin-top:12px;background:none;border:0;color:rgba(246,234,212,.7);font:600 14px 'Barlow',sans-serif;text-decoration:underline;cursor:pointer;align-self:center}
+.sn-x{position:absolute;top:10px;right:10px;z-index:3;width:40px;height:40px;border-radius:50%;border:2px solid #d9a441;background:rgba(44,11,16,.9);color:#fff;font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+.sn-x:hover{background:#d9a441;color:#2c0b10}
+#santaBadge{position:fixed;left:20px;bottom:24px;z-index:9990;display:none;flex-direction:column;align-items:center;gap:6px;background:none;border:0;cursor:pointer;padding:0;animation:snBob 2.6s ease-in-out infinite}
+#santaBadge.show{display:flex}
+#santaBadge img{width:110px;height:auto;max-height:130px;object-fit:contain;filter:drop-shadow(0 6px 14px rgba(0,0,0,.55))}
+#santaBadge span{background:#E0242F;color:#fff;font:800 12px 'Barlow Condensed',sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border:2px solid #d9a441;white-space:nowrap}
+@keyframes snBob{50%{transform:translateY(-6px)}}
+@media(max-width:820px){
+  #santaModal{padding:12px;align-items:flex-start;overflow-y:auto}
+  .sn-box{grid-template-columns:1fr;max-height:none;margin:auto 0}
+  .sn-img img{max-height:46vh}
+  .sn-bd{padding:24px 20px 22px}
+  .sn-list{display:none}
+}
+@media(max-width:700px){#santaBadge{bottom:66px;left:12px}#santaBadge img{width:84px}}
+@media(prefers-reduced-motion:reduce){#santaModal.open,.sn-box,#santaBadge{animation:none}}
