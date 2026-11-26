@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://getkrowd-del.github.io/kevins-sports-bar/foodmenu/</loc>
+    <lastmod>2026-11-26T18:47:19.602Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://getkrowd-del.github.io/kevins-sports-bar/events/</loc>
     <lastmod>2026-11-26T18:47:13.590Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -28,11 +33,6 @@
   <url>
     <loc>https://getkrowd-del.github.io/kevins-sports-bar/</loc>
     <lastmod>2026-11-26T18:46:42.326Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://getkrowd-del.github.io/kevins-sports-bar/foodmenu/</loc>
-    <lastmod>2026-11-26T18:46:29.430Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
